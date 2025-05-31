@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Londrina+Shadow&family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Londrina+Solid:wght@100;300;400;900&display=swap');
+
 :root {
   --primary-background: #ECECD1;
+  --secondary-background: #F1F0E3;
   --body-blue: #073E7B;
   --body-red: #F55A3C;
   --secondary : #4B5562;
@@ -9,36 +14,53 @@
   --body-green: #77F09B;
 }
 
-h1{
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 100px;
-  padding: 3px;
-  margin: 0px;
-  color: var(--secondary);
-}
-
-.head-section p{
-  padding: 0px;
-  font-size: 30px;
-  color: var(--secondary);
-}
-
-.londrina-shadow-regular {
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-body {
-  background-color: var(--primary-background);
+body, html, #root, .App {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-background);
 }
 
-.App {
-  font-family: Arial, sans-serif;
+
+.matter-scene {
+  position: absolute; /* Or fixed if you want it floating */
+  top: 0;
+  left: 0;
+  width: 200vw; /* Twice the viewport width */
+  height: 200vh; /* Twice the viewport height */
+  pointer-events: none;
+  z-index: 1;
+}
+
+h1 {
+  font-family: "Rampart One", sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  margin: 0;
+  padding: 3px;
+  color: var(--secondary);
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+}
+
+p{
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+section p{
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.head-section p {
+  font-size: 30px;
+  color: var(--secondary);
 }
 
 .banner {
@@ -46,17 +68,20 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--secondary);
+  background-color: #333;
   color: white;
   padding: 10px;
   display: flex;
   justify-content: center;
-  z-index: 1000;
+  z-index: 4;
 }
 
 .banner nav button {
-  background-color: var(--secondary);
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color: var(--primary-background);
+  background-color: #333;
   border: none;
   padding: 10px 15px;
   margin: 0 5px;
@@ -65,31 +90,34 @@ body {
 }
 
 .banner nav button:hover {
-  background-color: #777;
+  background-color: var(--body-blue);
 }
 
-.section {
-  height: 100vh; /* Full screen height */
+section{
+  height: 100vh;
   width: 100vw;
-  background-color: #f4f4f4;
-  border-bottom: 1px solid #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.head-section {
-  height: 100vh; /* Full screen height */
+.skills, section{
   width: 100vw;
+  height: 50vw;
+  justify-content: start;
+}
+
+section{
+  font-family: "Rampart One", sans-serif;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+section:nth-child(odd) {
   background-color: var(--primary-background);
-  border-bottom: 1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.section:nth-child(odd) {
-  background-color: #e0e0e0;
+section:nth-child(even) {
+  background-color: var(--secondary-background);
 }

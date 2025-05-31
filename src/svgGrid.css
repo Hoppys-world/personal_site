@@ -1,0 +1,22 @@
+.svg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;            /* Ensure it fills available space */
+    max-width: 1200px;      /* Optional: max width */
+    margin: 0 auto;         /* Center the grid container */
+  }
+  
+  .svg-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .svg-item img {
+    width: 50px;            /* Set desired SVG size */
+    height: 50px;
+    object-fit: contain;
+  }
+  
