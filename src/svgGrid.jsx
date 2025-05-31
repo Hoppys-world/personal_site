@@ -1,5 +1,5 @@
 import React from "react";
-import './SvgGrid.css';
+import './svgGrid.css';
 
 
 const modules = import.meta.glob('./assets/tech-stack/*.svg', { eager: true });
