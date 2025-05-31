@@ -102,10 +102,9 @@ section{
   align-items: center;
 }
 
-.skills, section{
+.skills{
   width: 100vw;
-  height: 50vw;
-  justify-content: start;
+  height: 40vw;
 }
 
 section{
