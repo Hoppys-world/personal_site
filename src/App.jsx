@@ -133,7 +133,7 @@ function App() {
       </header>
       <section id="section0" className="head-section">
         <h1>I'm Jacob Hopkins,</h1>
-        <p>A Full Stack developer from Salt Lake</p>
+        <p>A Full Stack developer out of Salt Lake City</p>
       </section>
       <section id="section1" className="about"><h2>About</h2><p>-</p></section>
       <section id="section2" className="work"><h2>Work</h2></section>

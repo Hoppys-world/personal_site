@@ -1,22 +1,31 @@
 .svg-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    width: 100%;            /* Ensure it fills available space */
-    max-width: 1200px;      /* Optional: max width */
-    margin: 0 auto;         /* Center the grid container */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;        /* Center items horizontally */
+    gap: 10px;                      /* Space between items */
+    padding: 10px;
   }
   
   .svg-item {
     display: flex;
+    flex: 1 1 calc(12.5% - 10px);   /* 12.5% = 8 columns (100%/8) minus gap */
+    max-width: calc(12.5% - 10px);  /* Optional: cap width per item */
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
   }
   
   .svg-item img {
-    width: 50px;            /* Set desired SVG size */
-    height: 50px;
+    width: 50%;
+    height: auto;
     object-fit: contain;
+  }
+  
+  /* Media Query for Smaller Screens (e.g. 4 columns) */
+  @media (max-width: 800px) {
+    .svg-item {
+      flex: 1 1 calc(25% - 10px);   /* 25% = 4 columns */
+      max-width: calc(25% - 10px);
+    }
   }
   

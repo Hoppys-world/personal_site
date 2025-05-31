@@ -102,9 +102,17 @@ section{
   align-items: center;
 }
 
-.skills{
-  width: 100vw;
-  height: 40vw;
+.skills {
+  width: 100%;             /* Full width of parent */
+  margin: 0 auto;          /* Center the section */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.skills h2 {
+  text-align: center;       /* Center the Skills heading */
+  font-size: 2em;           /* Responsive font size */
+  margin-bottom: 20px;
 }
 
 section{
