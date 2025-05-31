@@ -7,8 +7,8 @@ import starSVG1 from './assets/star1.svg';
 import starSVG2 from './assets/plus.svg';
 import starSVG3 from './assets/half.svg';
 import "./App.css";
-
 import SvgGrid from "./svgGrid.jsx";
+
 
 function App() {
   const sceneRef = useRef(null);
