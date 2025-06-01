@@ -1,39 +1,35 @@
 .svg-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    /* Center grid items horizontally */
-    gap: 10px;
-    /* Spacing between items */
+    justify-content: center;        
+    gap: 10px;                      
     padding: 10px;
     width: 100%;
-    max-width: 1200px;
-    /* Optional: limit total grid width */
-    margin: 0 auto;
-    /* Center grid container horizontally */
+    max-width: 1200px;              
+    margin: 0 auto;                 
     box-sizing: border-box;
-}
-
-.svg-grid-container{
+  }
+  
+  .svg-grid-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
-}
-
-.hover-title{
+  }
+  
+  .hover-title {
     display: flex;
     justify-content: center;
     min-height: 4rem;
-}
-
-.hover-title t{
+  }
+  
+  .hover-title t {
     font-family: "Londrina Solid", sans-serif;
     font-weight: 900;
     font-style: normal;
     color: black;
-}
-
-.svg-item {
+  }
+  
+  .svg-item {
     display: flex;
     flex: 1 1 calc(12.5% - 10px);
     max-width: calc(12.5% - 10px);
@@ -41,35 +37,39 @@
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
-}
-
-.svg-item img {
+  }
+  
+  .svg-item img {
     width: 100%;
-    max-width: 100px;
+    max-width: 100px;               
     height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
-}
-
-.svg-item:hover img {
+  }
+  
+  .svg-item:hover img {
     transform: scale(1.2);
-}
-
-@media (max-width: 800px) {
+  }
+  
+  @media (max-width: 800px) {
     .svg-item {
-        flex: 1 1 calc(25% - 10px);
-        max-width: calc(25% - 10px);
+      flex: 1 1 calc(25% - 10px);   
+      max-width: calc(25% - 10px);
     }
-}
-
-/* Media Query for Mobile (e.g., 2 columns) */
-@media (max-width: 500px) {
-    .svg-item {
-        flex: 1 1 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-    }
-
+  
     .svg-item img {
-        max-width: 80px;
+      max-width: 70px;              
     }
-}
+  }
+  
+  @media (max-width: 500px) {
+    .svg-item {
+      flex: 1 1 calc(25% - 10px);   
+      max-width: calc(25% - 10px);
+    }
+  
+    .svg-item img {
+      max-width: 40px;              
+    }
+  }
+  
