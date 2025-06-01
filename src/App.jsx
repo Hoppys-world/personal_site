@@ -8,7 +8,11 @@ import starSVG2 from './assets/plus.svg';
 import starSVG3 from './assets/half.svg';
 import "./App.css";
 import SvgGrid from "./svgGrid.jsx";
-
+import WorkExperience from "./work.jsx";
+import egi from "./assets/work/EGI-logo copy.png";
+import utah from "./assets/work/utah.svg";
+import plural from "./assets/work/pluralsight3.png";
+import me from "./assets/about/me.jpg";
 
 function App() {
   const sceneRef = useRef(null);
@@ -135,10 +139,31 @@ function App() {
         <h1>I'm Jacob Hopkins,</h1>
         <p>A Full Stack developer out of Salt Lake City</p>
       </section>
-      <section id="section1" className="about"><h2>About</h2><p>-</p></section>
-      <section id="section2" className="work"><h2>Work</h2></section>
-      <section id="section3" className="skills"><h2>Skills</h2><SvgGrid /></section>
-      <section id="section4" className="contact"><h2>Contact</h2><p>Email: Jacobkhopkins@gmail.com</p><p>Linkedin: www.linkedin.com/in/jacob-hopkins-codes</p></section>
+      <section id="section1" className="about main"><h2>About</h2><div><img src={me} alt={`Picture of Jacob Hopkins`} /><p>Here is a description of me, there is more text about me here I am. I am a student at the Universit of Utah</p></div></section>
+      <section id="section2" className="work main"><h2>Work</h2>
+      <WorkExperience logo={plural}
+        companyName="Pluralsight"
+        responsibilities={[
+          "Led front-end development and Led front-end development and Led front-end development and Led front-end development ",
+          "Collaborated with cross-functional teams and Collaborated with cross-functional teams and Collaborated with cross-functional teams ",
+          "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
+        ]} />
+      <WorkExperience logo={egi}
+        companyName="Energy and Geoscience Instatute"
+        responsibilities={[
+          "Led front-end development and Led front-end development and Led front-end development and Led front-end development ",
+          "Collaborated with cross-functional teams and Collaborated with cross-functional teams and Collaborated with cross-functional teams ",
+          "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
+        ]} />
+        <WorkExperience logo={utah}
+          companyName="University of Utah"
+          responsibilities={[
+            "Led front-end development and Led front-end development and Led front-end development and Led front-end development ",
+            "Collaborated with cross-functional teams and Collaborated with cross-functional teams and Collaborated with cross-functional teams ",
+            "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
+          ]} /></section>
+      <section id="section3" className="skills main"><h2>Skills</h2><SvgGrid /></section>
+      <section id="section4" className="contact main"><h2>Contact</h2><p>Email: Jacobkhopkins@gmail.com</p><p>Linkedin: www.linkedin.com/in/jacob-hopkins-codes</p></section>
     </div>
   );
 }

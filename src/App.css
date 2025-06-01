@@ -46,6 +46,32 @@ h1 {
   text-align: center;
 }
 
+h2{
+  color: var(--secondary);
+  font-family: "Rampart One", sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+@media (max-width: 750px) {
+  h1{
+    font-size: 70px;
+  }
+  p {
+    font-size: 20px;
+    color: var(--secondary);
+    padding: 5px;
+    margin: 30px;
+  }
+}
+
+li{
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 20px;
+}
+
 p{
   font-family: "Londrina Solid", sans-serif;
   font-weight: 900;
@@ -61,6 +87,11 @@ section p{
 .head-section p {
   font-size: 30px;
   color: var(--secondary);
+}
+
+.head-section{
+  height: 100vh;
+  width: 100vw;
 }
 
 .banner {
@@ -94,8 +125,6 @@ section p{
 }
 
 section{
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -113,6 +142,14 @@ section{
   text-align: center;       /* Center the Skills heading */
   font-size: 2em;           /* Responsive font size */
   margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.work {
+  width: 100%;             /* Full width of parent */
+  margin: 0 auto;          /* Center the section */
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 section{
@@ -121,10 +158,28 @@ section{
   font-size: 40px;
 }
 
-section:nth-child(odd) {
+.main:nth-child(odd) {
   background-color: var(--primary-background);
 }
 
-section:nth-child(even) {
+.main:nth-child(even) {
   background-color: var(--secondary-background);
+}
+
+.about div{
+  display: flex;
+  flex-direction: row;
+}
+
+.about img{
+  width: 40%;
+    height: auto;
+    object-fit: contain;
+  margin: 20px;
+  padding: 10px;
+}
+
+.about p{
+  margin: 20px;
+  padding: 10px;
 }

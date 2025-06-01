@@ -1,31 +1,74 @@
 .svg-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;        /* Center items horizontally */
-    gap: 10px;                      /* Space between items */
+    justify-content: center;
+    /* Center grid items horizontally */
+    gap: 10px;
+    /* Spacing between items */
     padding: 10px;
-  }
-  
-  .svg-item {
-    display: flex;
-    flex: 1 1 calc(12.5% - 10px);   /* 12.5% = 8 columns (100%/8) minus gap */
-    max-width: calc(12.5% - 10px);  /* Optional: cap width per item */
+    width: 100%;
+    max-width: 1200px;
+    /* Optional: limit total grid width */
+    margin: 0 auto;
+    /* Center grid container horizontally */
     box-sizing: border-box;
+}
+
+.svg-grid-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hover-title{
+    display: flex;
+    justify-content: center;
+    min-height: 4rem;
+}
+
+.hover-title t{
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.svg-item {
+    display: flex;
+    flex: 1 1 calc(12.5% - 10px);
+    max-width: calc(12.5% - 10px);
     justify-content: center;
     align-items: center;
-  }
-  
-  .svg-item img {
-    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.svg-item img {
+    width: 100%;
+    max-width: 100px;
     height: auto;
     object-fit: contain;
-  }
-  
-  /* Media Query for Smaller Screens (e.g. 4 columns) */
-  @media (max-width: 800px) {
+    transition: transform 0.3s ease;
+}
+
+.svg-item:hover img {
+    transform: scale(1.2);
+}
+
+@media (max-width: 800px) {
     .svg-item {
-      flex: 1 1 calc(25% - 10px);   /* 25% = 4 columns */
-      max-width: calc(25% - 10px);
+        flex: 1 1 calc(25% - 10px);
+        max-width: calc(25% - 10px);
     }
-  }
-  
+}
+
+/* Media Query for Mobile (e.g., 2 columns) */
+@media (max-width: 500px) {
+    .svg-item {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+
+    .svg-item img {
+        max-width: 80px;
+    }
+}
