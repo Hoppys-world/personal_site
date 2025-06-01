@@ -53,6 +53,10 @@ h2{
   font-size: 60px;
 }
 
+li, h3{
+  color: black;
+}
+
 @media (max-width: 750px) {
   h1{
     font-size: 70px;
