@@ -173,17 +173,36 @@ section{
 .about div{
   display: flex;
   flex-direction: row;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .about img{
-  width: 40%;
-    height: auto;
-    object-fit: contain;
+  width: 30%;
+  height: auto;
+object-fit: contain;
   margin: 20px;
-  padding: 10px;
+  padding: 0px;
+  border: 4px solid var(--secondary);   /* Custom color */
+  border-radius: 20px;          /* Optional rounded corners */
 }
 
 .about p{
   margin: 20px;
   padding: 10px;
+  color: var(--secondary);
+  font-size: 30px;
+}
+
+.about h2{
+  margin: 10px;
+}
+
+.contact .icon {
+  width: 70px;
+  height: auto;
+  margin: 32px;
+  margin-bottom: 60px;
 }

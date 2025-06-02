@@ -13,6 +13,27 @@ import egi from "./assets/work/EGI-logo copy.png";
 import utah from "./assets/work/utah.svg";
 import plural from "./assets/work/pluralsight3.png";
 import me from "./assets/about/me.jpg";
+import email from "./assets/contacts/email.svg";
+import github from "./assets/contacts/github.svg";
+import linkedin from "./assets/contacts/linkedin.svg";
+
+
+const ButtonRow = () => {
+  return (
+    <div className="button-row">
+      <a href="https://github.com/Hoppys-world" className="button">
+        <img src={github} alt="GitHub" className="icon" />
+      </a>
+      <a href="https://www.linkedin.com/in/jacob-hopkins-codes" className="button">
+        <img src={linkedin} alt="LinkedIn" className="icon" />
+      </a>
+      <a href="mailto:jacobkhopkins@gmail.com" className="button">
+        <img src={email} alt="Email" className="icon" />
+      </a>
+    </div>
+
+  );
+};
 
 function App() {
   const sceneRef = useRef(null);
@@ -141,20 +162,20 @@ function App() {
       </section>
       <section id="section1" className="about main"><h2>About</h2><div><img src={me} alt={`Picture of Jacob Hopkins`} /><p>Here is a description of me, there is more text about me here I am. I am a student at the Universit of Utah</p></div></section>
       <section id="section2" className="work main"><h2>Work</h2>
-      <WorkExperience logo={plural}
-        companyName="Pluralsight"
-        responsibilities={[
-          "Led front-end development and Led front-end development and Led front-end development and Led front-end development ",
-          "Collaborated with cross-functional teams and Collaborated with cross-functional teams and Collaborated with cross-functional teams ",
-          "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
-        ]} />
-      <WorkExperience logo={egi}
-        companyName="Energy and Geoscience Instatute"
-        responsibilities={[
-          "Led front-end development and Led front-end development and Led front-end development and Led front-end development ",
-          "Collaborated with cross-functional teams and Collaborated with cross-functional teams and Collaborated with cross-functional teams ",
-          "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
-        ]} />
+        <WorkExperience logo={plural}
+          companyName="Pluralsight"
+          responsibilities={[
+            "Led front-end development and Led front-end development and Led front-end development and Led front-end development ",
+            "Collaborated with cross-functional teams and Collaborated with cross-functional teams and Collaborated with cross-functional teams ",
+            "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
+          ]} />
+        <WorkExperience logo={egi}
+          companyName="Energy and Geoscience Instatute"
+          responsibilities={[
+            "Led front-end development and Led front-end development and Led front-end development and Led front-end development ",
+            "Collaborated with cross-functional teams and Collaborated with cross-functional teams and Collaborated with cross-functional teams ",
+            "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
+          ]} />
         <WorkExperience logo={utah}
           companyName="University of Utah"
           responsibilities={[
@@ -163,7 +184,7 @@ function App() {
             "Improved app performance by 30% and Improved app performance by 30% and Improved app performance by 30%"
           ]} /></section>
       <section id="section3" className="skills main"><h2>Skills</h2><SvgGrid /></section>
-      <section id="section4" className="contact main"><h2>Contact</h2><p>Email: Jacobkhopkins@gmail.com</p><p>Linkedin: www.linkedin.com/in/jacob-hopkins-codes</p></section>
+      <section id="section4" className="contact main"><h2>Contact</h2><ButtonRow /></section>
     </div>
   );
 }

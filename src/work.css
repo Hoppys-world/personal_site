@@ -1,61 +1,72 @@
 .work-experience {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .work-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 3;
-  }
-  
-  .work-logo img {
-    width: 40%;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .work-details {
-    flex: 4;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: stretch;          /* Stretch both logo and details to same height */
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;             /* Optional: consistent section width */
+  margin: 0 auto;                /* Center horizontally */
+}
+
+.work-logo {
+  flex: 3;                       /* Make logo area flexibly take 1 part */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;              /* Optional: consistent max width for logos */
+}
+
+.work-logo img {
+  width: 80%;                    /* Scale within logo block */
+  height: auto;
+  object-fit: contain;
+}
+
+.work-details {
+  flex: 4;                       /* Make details area take 3 parts */
+  display: flex;
+  align-items: flex-start;       /* Align text to start */
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.work-details h3 {
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.work li {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.work-details ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 768px) {
+  .work-experience {
     flex-direction: column;
-  }
-  
-  .work-details h3 {
-    margin-top: 0;
-    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;              /* Adjust width for smaller screens */
   }
 
-  .work li{
-    font-family: "Londrina Solid", sans-serif;
-    font-weight: 300;
-    font-style: normal;
+  .work-logo, .work-details {
+    max-width: 100%;             /* Allow full width on mobile */
+    flex: none;
   }
-  
+
+  .work-logo img {
+    width: 100px;                /* Smaller logo on mobile */
+  }
+
   .work-details ul {
-    margin: 0;
-    padding-left: 20px;
+    padding-left: 10px;
   }
-  
-  @media (max-width: 768px) {
-    .work-experience {
-      flex-direction: column;          /* Stack logo and details on mobile */
-      align-items: center;
-      text-align: center;
-    }
-  
-    .work-logo {
-      flex: 0 0 auto;
-      width: 100px;                   /* Adjust size on mobile */
-    }
-  
-    .work-details ul {
-      padding-left: 10px;
-    }
-  }
-  
+}
