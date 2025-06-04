@@ -6,9 +6,9 @@
 :root {
   --primary-background: #ECECD1;
   --secondary-background: #F1F0E3;
+  --secondary : #4B5562;
   --body-blue: #073E7B;
   --body-red: #F55A3C;
-  --secondary : #4B5562;
   --body-orange: #F19648;
   --body-yellow: #F5D259;
   --body-green: #77F09B;
@@ -23,16 +23,14 @@ body, html, #root, .App {
   background-color: var(--primary-background);
 }
 
-
-.matter-scene {
-  position: absolute; /* Or fixed if you want it floating */
-  top: 0;
-  left: 0;
-  width: 200vw; /* Twice the viewport width */
-  height: 200vh; /* Twice the viewport height */
-  pointer-events: none;
-  z-index: 1;
+.head-section {
+  position: relative; /* Key addition */
+  width: 100%;
+  height: 100vh;       /* Or however tall you want this section */
+  overflow: hidden;    /* Optional: prevents canvas overflow */
+  border: none;
 }
+
 
 h1 {
   font-family: "Rampart One", sans-serif;
@@ -162,15 +160,15 @@ section{
   font-size: 40px;
 }
 
-.main:nth-child(odd) {
+.main:nth-child(even) {
   background-color: var(--primary-background);
 }
 
-.main:nth-child(even) {
+.main:nth-child(odd) {
   background-color: var(--secondary-background);
 }
 
-.about div{
+#about-info{
   display: flex;
   flex-direction: row;
   padding-left: 40px;
@@ -179,14 +177,64 @@ section{
   margin-right: 40px;
 }
 
-.about img{
-  width: 30%;
+#about-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about-right button{
+  display: flex;
+  flex-direction: row;
   height: auto;
-object-fit: contain;
+  align-items: center;
+  padding: none;
+  margin: 30px;
+  font-size: 20px;
+  margin-left: 200px;
+  border: 5px solid var(--secondary);
+  background-color: var(--primary-background);
+  color: var(--secondary);
+  border-radius: 20px;
+}
+
+#about-right img{
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 1px;
+  padding: 1px;
+}
+
+
+.about img{
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
   margin: 20px;
   padding: 0px;
   border: 4px solid var(--secondary);   /* Custom color */
   border-radius: 20px;          /* Optional rounded corners */
+}
+
+@media (max-width: 750px) {
+  .about img{
+    width: 200px;
+    height: 200px;         /* Optional rounded corners */
+  }
+  #about-info{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+  }
+  #about-info p{
+    padding: 0px;
+  }
+  #about-right button{
+    margin-left: 0px;
+  }
 }
 
 .about p{
@@ -205,4 +253,8 @@ object-fit: contain;
   height: auto;
   margin: 32px;
   margin-bottom: 60px;
+}
+
+.contact div{
+  margin-bottom: 100px;
 }
