@@ -33,8 +33,9 @@
 }
 
 .work-details h3 {
-  margin-top: 0;
+  margin-top: 0px;
   font-size: 30px;
+  margin-bottom: 0px;
 }
 
 .work li {
@@ -46,6 +47,13 @@
 .work-details ul {
   margin: 0;
   padding-left: 20px;
+}
+
+.work p{
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 18px;
 }
 
 /* Responsive: Stack on smaller screens */

@@ -41,9 +41,9 @@ const MatterCanvas = () => {
         let ballRes = .8;
         const screenWidth = window.innerWidth;
         if (screenWidth < 1000){
-            ballCount = 45;
-            ballRes = 0.8;
-            ballSize = 30;
+            ballCount = 48;
+            ballRes = 0.9;
+            ballSize = 25;
         }
         for (let i = 0; i < ballCount; i++) {
             const color = colors[Math.floor(Math.random() * colors.length)];
