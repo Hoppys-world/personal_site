@@ -7,11 +7,11 @@
   --primary-background: #ECECD1;
   --secondary-background: #F1F0E3;
   --secondary : #4B5562;
-  --body-blue: #073E7B;
-  --body-red: #F55A3C;
-  --body-orange: #F19648;
-  --body-yellow: #F5D259;
-  --body-green: #77F09B;
+  --body-blue: #6C90B7;
+  --body-red: #C85A5A;
+  --body-orange: #E69A5C;
+  --body-yellow: #E8C45E;
+  --body-green: #7FAF75;
 }
 
 body, html, #root, .App {
@@ -23,12 +23,17 @@ body, html, #root, .App {
   background-color: var(--primary-background);
 }
 
+
 .head-section {
   position: relative; /* Key addition */
   width: 100%;
   height: 100vh;       /* Or however tall you want this section */
   overflow: hidden;    /* Optional: prevents canvas overflow */
   border: none;
+}
+
+.head-section p {
+  z-index: 4;
 }
 
 
@@ -38,7 +43,7 @@ h1 {
   font-size: 100px;
   margin: 0;
   padding: 3px;
-  color: var(--secondary);
+  color: black;
   z-index: 3;
   width: 100%;
   text-align: center;
@@ -51,6 +56,29 @@ h2{
   font-size: 60px;
   margin-bottom: 10px;
 }
+
+.underline {
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-decoration-color: var(--body-blue);
+}
+
+.work .underline{
+  text-decoration-color: var(--body-red);
+}
+
+.about .underline{
+  text-decoration-color: var(--body-green);
+}
+
+.contact .underline{
+  text-decoration-color: var(--body-yellow);
+}
+
+.projects .underline{
+  text-decoration-color: var(--body-orange);
+}
+
 
 li, h3{
   color: black;
@@ -126,6 +154,22 @@ section p{
 
 .banner nav button:hover {
   background-color: var(--body-blue);
+}
+
+.banner nav .aboutB:hover {
+  background-color: var(--body-green);
+}
+
+.banner nav .ProjectsB:hover {
+  background-color: var(--body-orange);
+}
+
+.banner nav .workB:hover {
+  background-color: var(--body-red);
+}
+
+.banner nav .ContactB:hover {
+  background-color: var(--body-yellow);
 }
 
 section{
@@ -230,6 +274,7 @@ section{
     padding: 0px;
   }
   #about-info p{
+    font-size: 20px;
     padding: 0px;
   }
   #about-right button{

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
 .work-experience {
   display: flex;
   align-items: stretch;          /* Stretch both logo and details to same height */
@@ -39,9 +41,21 @@
 }
 
 .work li {
-  font-family: "Londrina Solid", sans-serif;
-  font-weight: 300;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.work p{
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .work-details ul {
@@ -51,6 +65,7 @@
 
 .work p{
   font-size: 20px;
+  font-weight: 900;
   padding: 0px;
   margin: 0px;
   margin-bottom: 18px;

@@ -36,6 +36,7 @@ const ButtonRow = () => {
   );
 };
 
+
 const handleDownload = () => {
   const link = document.createElement('a');
   link.href = '/resume/Jacob Hopkins Resume.pdf'; // relative to public folder
@@ -54,10 +55,11 @@ function App() {
 
       <header className="banner">
         <nav>
-          <button onClick={() => document.getElementById('section1').scrollIntoView({ behavior: "smooth" })}>About</button>
-          <button onClick={() => document.getElementById('section2').scrollIntoView({ behavior: "smooth" })}>Work</button>
-          <button onClick={() => document.getElementById('section3').scrollIntoView({ behavior: "smooth" })}>Skills</button>
-          <button onClick={() => document.getElementById('section4').scrollIntoView({ behavior: "smooth" })}>Contact</button>
+          <button className="aboutB" onClick={() => document.getElementById('section1').scrollIntoView({ behavior: "smooth" })}>About</button>
+          <button className="workB" onClick={() => document.getElementById('section2').scrollIntoView({ behavior: "smooth" })}>Work</button>
+          <button className="ProjectsB" onClick={() => document.getElementById('section3').scrollIntoView({ behavior: "smooth" })}>Projects</button>
+          <button className="SkillsB" onClick={() => document.getElementById('section4').scrollIntoView({ behavior: "smooth" })}>Skills</button>
+          <button className="ContactB" onClick={() => document.getElementById('section5').scrollIntoView({ behavior: "smooth" })}>Contact</button>
         </nav>
       </header>
 
@@ -66,13 +68,13 @@ function App() {
         <h1>I'm Jacob Hopkins,</h1>
         <p>A Full Stack developer out of Salt Lake City</p>
       </section>
-      <section id="section1" className="about main"><h2>About</h2>
-      <div id="about-info"><img src={me} alt={`Picture of Jacob Hopkins`} />
-      <div id="about-right"><p>My name is Jacob Hopkins, I am studying Computer Science at the University of Utah. I am a BS/MS Student so I am working on my undergraduate and masters concurrently. I'm passionate about all forms of full stack developement and love growing my skills.</p><button onClick={handleDownload}><img src={resume} alt="Resume Download" className="icon" />Resume</button>
-      </div>
-      </div>
+      <section id="section1" className="about main"><h2 className="underline">About</h2>
+        <div id="about-info"><img src={me} alt={`Picture of Jacob Hopkins`} />
+          <div id="about-right"><p>My name is Jacob Hopkins, I am studying Computer Science at the University of Utah. I am a BS/MS Student so I am working on my undergraduate and masters concurrently. I'm passionate about all forms of full stack developement and love growing my skills.</p><button onClick={handleDownload}><img src={resume} alt="Resume Download" className="icon" />Resume</button>
+          </div>
+        </div>
       </section>
-      <section id="section2" className="work main"><h2>Work</h2>
+      <section id="section2" className="work main"><h2 className="underline">Work</h2>
         <WorkExperience logo={plural}
           companyName="Pluralsight"
           responsibilities={[
@@ -81,7 +83,7 @@ function App() {
           ]}
           date="May 2025 - Current" />
         <WorkExperience logo={egi}
-          companyName="Energy and Geoscience Instatute"
+          companyName="Energy and Geoscience Institute"
           responsibilities={[
             "Collaborated with Geologists and Civil Engineers to design and develop custom software solutions tailored to industry needs.",
             "Led the design and development of a cutting-edge CO2 absorption calculation tool, streamlining environmental impact assessments for Geologists."
@@ -94,8 +96,9 @@ function App() {
             "Worked closely with the course instructor and other TAs to coordinate teaching efforts and share best practices."
           ]}
           date="August 2024 - December 2024" /></section>
-      <section id="section3" className="skills main"><h2>Skills</h2><SvgGrid /></section>
-      <section id="section4" className="contact main"><h2>Contact</h2><ButtonRow /><p>Email: jacobkhopkins@gmail.com</p></section>
+      <section id="section3" className="projects main"><h2 className="underline">Projects</h2></section>
+      <section id="section4" className="skills main"><h2 className="underline">Skills</h2><SvgGrid /></section>
+      <section id="section5" className="contact main"><h2 className="underline">Contact</h2><ButtonRow /><p>Email: jacobkhopkins@gmail.com</p></section>
     </div>
   );
 }
