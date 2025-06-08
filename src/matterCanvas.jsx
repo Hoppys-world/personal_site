@@ -49,9 +49,9 @@ const MatterCanvas = () => {
         let ballRes = 0.8;
 
         if (window.innerWidth < 1000) {
-            MAX_BALLS = 45;
+            MAX_BALLS = 40;
             ballRes = 0.9;
-            ballSize = 35;
+            ballSize = 45;
         }
 
         const spawnBall = () => {
@@ -94,7 +94,10 @@ const MatterCanvas = () => {
                 height + THICCNESS / 2,
                 width * 3,
                 THICCNESS,
-                { isStatic: true }
+                { isStatic: true, render: {
+                    fillStyle: "#ECECD1",     // ← background color of the ground
+                    lineWidth: 2              // ← border thickness
+                  } }
             );
 
             const leftWall = Bodies.rectangle(

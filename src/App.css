@@ -135,7 +135,7 @@ section p{
   padding: 10px;
   display: flex;
   justify-content: center;
-  z-index: 4;
+  z-index: 6;
 }
 
 
@@ -318,5 +318,5 @@ section{
 
 .contact p{
   margin: 0px;
-  margin-bottom: 200px;
+  margin-bottom: 80px;
 }

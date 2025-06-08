@@ -81,7 +81,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 90%;              /* Adjust width for smaller screens */
+    flex-direction: column-reverse;
+    max-width: 90%;
+    margin-top: 10px; 
+    margin-bottom: 10px;            /* Adjust width for smaller screens */
   }
 
   .project-logo, .project-details {
