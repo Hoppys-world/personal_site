@@ -9,6 +9,7 @@ import starSVG3 from './assets/half.svg';
 import "./App.css";
 import SvgGrid from "./svgGrid.jsx";
 import WorkExperience from "./work.jsx";
+import Project from "./project.jsx";
 import egi from "./assets/work/EGI-logo copy.png";
 import utah from "./assets/work/utah.svg";
 import plural from "./assets/work/pluralsight3.png";
@@ -18,6 +19,8 @@ import github from "./assets/contacts/github.svg";
 import linkedin from "./assets/contacts/linkedin.svg";
 import MatterCanvas from "./matterCanvas.jsx";
 import resume from "./assets/contacts/resume.svg";
+import sourcerer from "./assets/work/resume.png";
+import malloc from "./assets/work/malloc.png";
 
 
 const ButtonRow = () => {
@@ -52,7 +55,6 @@ function App() {
   return (
     <div className="App">
       <MatterCanvas />
-
       <header className="banner">
         <nav>
           <button className="aboutB" onClick={() => document.getElementById('section1').scrollIntoView({ behavior: "smooth" })}>About</button>
@@ -62,9 +64,7 @@ function App() {
           <button className="ContactB" onClick={() => document.getElementById('section5').scrollIntoView({ behavior: "smooth" })}>Contact</button>
         </nav>
       </header>
-
       <section id="section0" className="head-section">
-
         <h1>I'm Jacob Hopkins,</h1>
         <p>A Full Stack developer out of Salt Lake City</p>
       </section>
@@ -96,7 +96,10 @@ function App() {
             "Worked closely with the course instructor and other TAs to coordinate teaching efforts and share best practices."
           ]}
           date="August 2024 - December 2024" /></section>
-      <section id="section3" className="projects main"><h2 className="underline">Projects</h2></section>
+      <section id="section3" className="project main"><h2 className="underline">Projects</h2>
+        <Project image={sourcerer} name="Sourcerer" tools="C#, MySQL, ASP.NET" bullets={["Worked as a full-stack developer on a team to build a machine learning-powered online source generator", "Designed and developed a cross-platform application using Flutter, deployed on web, iOS, and Android, ensuring aconsistent and seamless user experience across devices.", "Built a scalable Flask backend integrated with a MySQL database, enabling secure and efficient data storage andretrieval. Deployed on an EC2 Instance."]} />
+        <Project image={malloc} name="Pooled Memory Allicator"  tools="C, Linux" bullets={["Developed a custom Memory Allocator in C using explicit and implicit free list strategies, achieving an increase inmemory allocation efficiency by processing requests 30% faster than traditional methods within the project scope.", "Implemented a suite of functional tests and stress tests to validate behavior under high load."]} />
+      </section>
       <section id="section4" className="skills main"><h2 className="underline">Skills</h2><SvgGrid /></section>
       <section id="section5" className="contact main"><h2 className="underline">Contact</h2><ButtonRow /><p>Email: jacobkhopkins@gmail.com</p></section>
     </div>

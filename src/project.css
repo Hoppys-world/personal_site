@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+.project-experience {
+  display: flex;
+  align-items: stretch;          
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1500px;             
+  margin: 40px;                /* Center horizontally */
+}
+
+.project-image {
+  flex: 4;                       /* Make logo area flexibly take 1 part */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;              /* Optional: consistent max width for logos */
+}
+
+.project-image img {
+  width: 80%;                    /* Scale within logo block */
+  height: auto;
+  object-fit: contain;
+}
+
+.project-heading{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: end;
+}
+
+.project-details {
+  flex: 1;                       /* Make details area take 3 parts */
+  display: flex;
+  align-items: flex-start;       /* Align text to start */
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.project-details h3 {
+  margin-top: 0px;
+  font-size: 30px;
+  margin-bottom: 0px;
+}
+
+.project li {
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.project p{    
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0px;
+    margin: 0px;
+    text-align: end;
+}
+
+.project-details ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Responsive: Stack on smaller screens */
+@media (max-width: 768px) {
+  .project-experience {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;              /* Adjust width for smaller screens */
+  }
+
+  .project-logo, .project-details {
+    max-width: 100%;             /* Allow full width on mobile */
+    flex: none;
+  }
+
+  .project-logo img {
+    width: 100px;                /* Smaller logo on mobile */
+  }
+
+  .project-details ul {
+    padding-left: 10px;
+  }
+
+  .project-heading {
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 0;
+    margin-bottom: 18px;
+  }
+}

@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Matter from "matter-js";
 
 const THICCNESS = 60;
-const SPAWN_INTERVAL_MS = 500;
-let MAX_BALLS = 60;
+const SPAWN_INTERVAL_MS = 1500;
+let MAX_BALLS = 80;
 
 const MatterCanvas = () => {
   const matterRef = useRef(null);

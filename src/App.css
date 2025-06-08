@@ -33,7 +33,9 @@ body, html, #root, .App {
 }
 
 .head-section p {
+  color: black;
   z-index: 4;
+  font-size: 30px;
 }
 
 
@@ -75,7 +77,7 @@ h2{
   text-decoration-color: var(--body-yellow);
 }
 
-.projects .underline{
+.project .underline{
   text-decoration-color: var(--body-orange);
 }
 
@@ -116,10 +118,6 @@ section p{
   font-style: normal;
 }
 
-.head-section p {
-  font-size: 30px;
-  color: var(--secondary);
-}
 
 .head-section{
   height: 100vh;
