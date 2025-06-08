@@ -63,6 +63,7 @@ h2{
   text-decoration: underline;
   text-decoration-thickness: 6px;
   text-decoration-color: var(--body-blue);
+  text-underline-offset: 8px; /* Adjust as needed */
 }
 
 .work .underline{
@@ -137,6 +138,8 @@ section p{
   z-index: 4;
 }
 
+
+
 .banner nav button {
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
@@ -148,6 +151,15 @@ section p{
   margin: 0 5px;
   cursor: pointer;
   font-size: 25px;
+}
+
+@media (max-width: 750px) {
+  .banner{
+    padding-left: 0px;
+  }
+  .banner nav button{
+    font-size: 16px;
+  }
 }
 
 .banner nav button:hover {
