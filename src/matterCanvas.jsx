@@ -94,10 +94,12 @@ const MatterCanvas = () => {
                 height + THICCNESS / 2,
                 width * 3,
                 THICCNESS,
-                { isStatic: true, render: {
-                    fillStyle: "#ECECD1",     // ← background color of the ground
-                    lineWidth: 2              // ← border thickness
-                  } }
+                {
+                    isStatic: true, render: {
+                        fillStyle: "#ECECD1",     // ← background color of the ground
+                        lineWidth: 2              // ← border thickness
+                    }
+                }
             );
 
             const leftWall = Bodies.rectangle(
@@ -116,20 +118,28 @@ const MatterCanvas = () => {
                 { isStatic: true }
             );
 
-            const name = Bodies.rectangle(
-                width / 2,
-                height / 2,
-                400,
-                THICCNESS,
-                { isStatic: true }
-            );
+            const title = Bodies.rectangle(width / 2, height / 2, width / 2, width / 4, {
+                isStatic: true,
+                render: {
+                    // sprite: {
+                    //   texture: '/text-2.svg',
+                    //   xScale: 2,
+                    //   yScale: 2,
+                    // },
+                    strokeStyle: '#FF0000',
+                    lineWidth: 3,
+                }
+            });
+
+
 
             groundRef.current = ground;
             leftWallRef.current = leftWall;
             rightWallRef.current = rightWall;
-            nameRef.current = name;
+            nameRef.current = title;
 
-            Composite.add(engine.world, [ground, leftWall, rightWall]);
+
+            Composite.add(engine.world, [ground, leftWall, rightWall, title]);
         };
 
         createStaticBodies();
@@ -187,8 +197,21 @@ const MatterCanvas = () => {
                 );
                 Matter.Body.setPosition(
                     nameRef.current,
-                    Matter.Vector.create(width / 2, height / 2)
+                    Matter.Vector.create(width / 2, height / 2),
                 );
+                Composite.remove(engine.world, nameRef.current);
+
+                const newWidth = width/2;
+                const newHeight = width/4;
+
+                const newName = Bodies.rectangle(width / 2, height / 2, newWidth, newHeight, {
+                    isStatic: true,
+                    render: {
+                        fillStyle: '#ccc',
+                    }
+                });
+                nameRef.current = newName;
+
             }, 100);
         };
 
