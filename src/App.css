@@ -159,6 +159,7 @@ section p{
   }
   .banner nav button{
     font-size: 16px;
+    margin: 0px;
   }
 }
 
@@ -239,19 +240,19 @@ section{
   height: auto;
   align-items: center;
   margin: 30px;
-  margin-top: 0px;
   padding: 10px;
   font-size: 25px;
   font-family: "Londrina Solid", sans-serif;
   font-weight: 400;
   font-style: normal;
-  margin-left: 200px;
   border: 5px solid var(--secondary);
   background-color: var(--secondary-background);
   color: var(--secondary);
   border-radius: 20px;
   gap: 5px;
 }
+
+
 
 #about-right img{
   width: 40px;
@@ -286,14 +287,20 @@ section{
   #about-info p{
     font-size: 20px;
     padding: 0px;
-  }
-  #about-right button{
-    margin-left: 0px;
+    margin-bottom: 10px;
   }
 }
 
+
 .about p{
-  margin: 20px;
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  margin: 0px;
+  margin-bottom: 28px;
   padding: 10px;
   color: var(--secondary);
   font-size: 30px;

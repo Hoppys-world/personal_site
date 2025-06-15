@@ -73,6 +73,11 @@
 
 /* Responsive: Stack on smaller screens */
 @media (max-width: 768px) {
+  .work p{
+    margin-bottom: 8px;
+
+  }
+
   .work-experience {
     flex-direction: column;
     align-items: center;
