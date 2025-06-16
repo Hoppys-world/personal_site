@@ -7,7 +7,7 @@ Matter.Common.setDecomp(decomp);
 
 const THICCNESS = 60;
 const SPAWN_INTERVAL_MS = 1500;
-let MAX_BALLS = 100;
+let MAX_BALLS = 150;
 
 const MatterCanvas = () => {
     const matterRef = useRef(null);
@@ -35,7 +35,7 @@ const MatterCanvas = () => {
             engine,
             options: {
                 width: window.innerWidth,
-                height: isMobile ? window.screen.height * 0.85 : window.innerHeight,
+                height: isMobile ? window.screen.height * 0.80 : window.innerHeight,
                 background: "transparent",
                 wireframes: false,
             },
@@ -44,7 +44,7 @@ const MatterCanvas = () => {
         engineRef.current = engine;
         renderRef.current = render;
 
-        const height = isMobile ? window.screen.height * 0.85 : window.innerHeight;
+        const height = isMobile ? window.screen.height * 0.80 : window.innerHeight;
 
         const ground = Bodies.rectangle(window.innerWidth / 2, height + THICCNESS / 2, window.innerWidth * 3, THICCNESS, { isStatic: true });
         const leftWall = Bodies.rectangle(-THICCNESS / 2, height / 2, THICCNESS, height * 2, { isStatic: true });
@@ -57,6 +57,8 @@ const MatterCanvas = () => {
 
         const colors = ["#C85A5A", "#E69A5C", "#E8C45E", "#7FAF75", "#6C90B7"];
         const ballSize = window.innerWidth < 800 ? 25 : 40;
+        let restitution = .9;
+        if (window.innerWidth < 800) restitution = .8
         if (window.innerWidth < 800) MAX_BALLS = 55;
 
         let spawnedCount = 0;
@@ -96,7 +98,11 @@ const MatterCanvas = () => {
                 }
                 return [];
             });
+            if(window.innerWidth < 800){
+                rawVertices = Matter.Vertices.hull(rawVertices);
+            }
 
+            
             const bounds = rawVertices.reduce((acc, v) => ({
                 minX: Math.min(acc.minX, v.x),
                 maxX: Math.max(acc.maxX, v.x),
@@ -129,8 +135,8 @@ const MatterCanvas = () => {
             let yerror = 1.15;
 
             if(width < 800){
-                xerror = 1.08;
-                yerror = 1.08;
+                xerror = 1.00;
+                yerror = 1.1;
                 scale = (width * 0.85) / svgWidth;
             }
 

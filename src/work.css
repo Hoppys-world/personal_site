@@ -28,10 +28,10 @@
 .work-details {
   flex: 4;                       /* Make details area take 3 parts */
   display: flex;
-  align-items: flex-start;       /* Align text to start */
+  align-items: center;       /* Align text to start */
   flex-direction: column;
   justify-content: center;
-  text-align: left;
+  text-align: center;
 }
 
 .work-details h3 {
@@ -47,6 +47,8 @@
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+    text-align: start;
+
 }
 
 .work p{
@@ -76,6 +78,10 @@
   .work p{
     margin-bottom: 8px;
 
+  }
+
+  .work h3{
+    font-size: 25px;
   }
 
   .work-experience {

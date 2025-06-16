@@ -83,9 +83,9 @@
     text-align: center;
     flex-direction: column-reverse;
     max-width: 90%;
-    margin-top: 30px; 
-    margin-bottom: 10px;            /* Adjust width for smaller screens */
-  }
+    margin-top: 15px; 
+    margin-bottom: 25px;  
+}
 
   .project-logo, .project-details {
     max-width: 100%;             /* Allow full width on mobile */
@@ -99,6 +99,10 @@
 
   .project-details ul {
     padding-left: 10px;
+  }
+
+  .project-details{
+    text-align: center;
   }
 
   .project-heading {

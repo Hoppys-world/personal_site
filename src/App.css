@@ -59,7 +59,6 @@ h1 {
 
  
 h2{
-  color: var(--secondary);
   font-family: "Rampart One", sans-serif;
   font-weight: bold;
   font-size: 60px;
@@ -97,7 +96,6 @@ li, h3{
 @media (max-width: 750px) {
   p {
     font-size: 20px;
-    color: var(--secondary);
     padding: 5px;
     margin: 30px;
     margin-bottom: 120px;
@@ -306,7 +304,6 @@ section{
   margin: 0px;
   margin-bottom: 28px;
   padding: 10px;
-  color: var(--secondary);
   font-size: 30px;
 }
 
