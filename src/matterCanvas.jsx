@@ -7,7 +7,7 @@ Matter.Common.setDecomp(decomp);
 
 const THICCNESS = 60;
 const SPAWN_INTERVAL_MS = 1500;
-let MAX_BALLS = 80;
+let MAX_BALLS = 100;
 
 const MatterCanvas = () => {
     const matterRef = useRef(null);
@@ -56,8 +56,8 @@ const MatterCanvas = () => {
         Composite.add(engine.world, [ground, leftWall, rightWall]);
 
         const colors = ["#C85A5A", "#E69A5C", "#E8C45E", "#7FAF75", "#6C90B7"];
-        const ballSize = window.innerWidth < 800 ? 30 : 40;
-        if (window.innerWidth < 800) MAX_BALLS = 40;
+        const ballSize = window.innerWidth < 800 ? 25 : 40;
+        if (window.innerWidth < 800) MAX_BALLS = 55;
 
         let spawnedCount = 0;
         const spawnBall = () => {
@@ -124,10 +124,10 @@ const MatterCanvas = () => {
             renderRef.current.options.width = width;
             renderRef.current.options.height = height;
 
-            const scale = (width * 0.6) / svgWidth;
+            const scale = (width * 0.7) / svgWidth;
             const scaledVertices = rawVertices.map(v => ({
-                x: (v.x - bounds.minX - svgWidth / 2) * scale,
-                y: (v.y - bounds.minY - svgHeight / 2) * scale
+                x: (v.x - bounds.minX - svgWidth / 2) * scale * .94,
+                y: (v.y - bounds.minY - svgHeight / 2) * scale * .94
             }));
 
             const centerX = width / 2;
@@ -136,7 +136,7 @@ const MatterCanvas = () => {
             let yerror = 1.12;
 
             if(width < 800){
-                xerror = .97;
+                xerror = .98;
                 yerror = 1.04;
             }
 
