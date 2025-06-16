@@ -67,6 +67,9 @@ function App() {
       <section id="section0" className="head-section">
         {/* <h1>I'm Jacob Hopkins,</h1>
         <p>A Full Stack developer out of Salt Lake City</p> */}
+        <h1>I'm</h1>
+        <h1>Jacob</h1>
+        <h1>Hopkins</h1>
       </section>
       <section id="section1" className="about main"><h2 className="underline">About</h2>
         <div id="about-info"><img src={me} alt={`Picture of Jacob Hopkins`} />

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Matter from "matter-js";
 import decomp from "poly-decomp";
-import nameSVG from "./assets/boundobj.svg";
+import nameSVG from "./assets/boundobj3.svg";
 
 Matter.Common.setDecomp(decomp);
 
@@ -124,21 +124,25 @@ const MatterCanvas = () => {
             renderRef.current.options.width = width;
             renderRef.current.options.height = height;
 
-            const scale = (width * 0.7) / svgWidth;
+            let scale = (width * 0.55) / svgWidth;
+            let xerror = 1.06;
+            let yerror = 1.15;
+
+            if(width < 800){
+                xerror = 1.08;
+                yerror = 1.08;
+                scale = (width * 0.85) / svgWidth;
+            }
+
+    
             const scaledVertices = rawVertices.map(v => ({
-                x: (v.x - bounds.minX - svgWidth / 2) * scale * .94,
-                y: (v.y - bounds.minY - svgHeight / 2) * scale * .94
+                x: (v.x - bounds.minX - svgWidth / 2) * scale * .78,
+                y: (v.y - bounds.minY - svgHeight / 2) * scale * .78
             }));
 
             const centerX = width / 2;
             const centerY = height / 2;
-            let xerror = .97;
-            let yerror = 1.12;
-
-            if(width < 800){
-                xerror = .98;
-                yerror = 1.04;
-            }
+            
 
             if (svgBodyRef.current) Composite.remove(engine.world, svgBodyRef.current);
             if (spriteBodyRef.current) Composite.remove(engine.world, spriteBodyRef.current);
@@ -159,10 +163,13 @@ const MatterCanvas = () => {
                 isStatic: true,
                 collisionFilter: { mask: 0 },
                 render: {
+                    fillStyle: "transparent",
+                    strokeStyle: "#000",
+                    lineWidth: 0,
                     sprite: {
-                        texture: '/nameobj.svg',
-                        xScale: spriteScaleX,
-                        yScale: spriteScaleY
+                        //texture: '/nameobj.svg',
+                        //xScale: spriteScaleX,
+                        //yScale: spriteScaleY
                     }
                 }
             });
