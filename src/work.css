@@ -2,33 +2,33 @@
 
 .work-experience {
   display: flex;
-  align-items: stretch;          /* Stretch both logo and details to same height */
+  align-items: stretch;          
   justify-content: space-between;
   flex-direction: row;
   gap: 20px;
   padding: 20px;
-  max-width: 1000px;             /* Optional: consistent section width */
-  margin: 0 auto;                /* Center horizontally */
+  max-width: 1000px;            
+  margin: 0 auto;               
 }
 
 .work-logo {
-  flex: 3;                       /* Make logo area flexibly take 1 part */
+  flex: 3;                      
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 200px;              /* Optional: consistent max width for logos */
+  max-width: 200px;             
 }
 
 .work-logo img {
-  width: 80%;                    /* Scale within logo block */
+  width: 80%;                    
   height: auto;
   object-fit: contain;
 }
 
 .work-details {
-  flex: 4;                       /* Make details area take 3 parts */
+  flex: 4;                     
   display: flex;
-  align-items: center;       /* Align text to start */
+  align-items: start;       
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -73,7 +73,6 @@
   margin-bottom: 18px;
 }
 
-/* Responsive: Stack on smaller screens */
 @media (max-width: 768px) {
   .work p{
     margin-bottom: 8px;
@@ -88,16 +87,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 90%;              /* Adjust width for smaller screens */
+    max-width: 90%;            
   }
 
   .work-logo, .work-details {
-    max-width: 100%;             /* Allow full width on mobile */
+    max-width: 100%;            
     flex: none;
+    align-items: center;
   }
 
   .work-logo img {
-    width: 100px;                /* Smaller logo on mobile */
+    width: 100px;             
   }
 
   .work-details ul {

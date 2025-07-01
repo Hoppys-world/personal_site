@@ -54,6 +54,8 @@ const handleDownload = () => {
 function App() {
   return (
     <div className="App">
+       <title>Jacob Hopkins</title>
+       <link rel="icon" type="image/x-icon" href="/J.svg"></link>
       <MatterCanvas />
       <header className="banner">
         <nav>
